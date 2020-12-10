@@ -25,10 +25,10 @@ int main()
         sscanf("");
         break;
     default:
-        printf("You make wrong choice!");
+        printf("\nYou make wrong choice!");
         break;
     }
-    printf("1: printf()\t2: puts()\t3: putchar()\t4: sprintf()\nSelect the string output method: ");
+    printf("\n1: printf()\t2: puts()\t3: putchar()\t4: sprintf()\n\nSelect the string output method: ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -45,7 +45,7 @@ int main()
         sprintf("");
         break;
         default:
-        printf("You make wrong choice!");
+        printf("\nYou make wrong choice!");
         break;
     }
     return 0;
