@@ -6,7 +6,7 @@ int main()
     int choice,len=0;
     printf("Enter the string: ");
     gets(str);
-    printf("1: By Predefined function\t2: By Manually\nSelect the method for count the length of entred string: ");
+    printf("\n1: By Predefined function\t2: By Manually\n\nSelect the method for count the length of entred string: ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -20,9 +20,9 @@ int main()
         }
         break;
     default:
-        printf("You make worng choice!");
+        printf("\nYou make worng choice!");
         break;
     }
-    printf("Length of string is: %d",len);
+    printf("\nLength of string is: %d",len);
     return 0;
 }
