@@ -3,7 +3,7 @@
 int fdfstocrofch(char[],char);
 int main()
 {
-    int choice;
+    int choice,po;
     char str[100],ch,*pos;
     printf("Enter the string: ");
     fflush(stdin);
@@ -16,13 +16,39 @@ int main()
     {
         case 1:
             pos=strchr(str,ch);
+            printf("Position of character is: %s", pos);
             break;
         case 2:
-            
-        break;
+            po=fdfstocrofch(str,ch);
+            printf("Index of character is: %s", po);
+            break;
         default:
-        break;
+            printf("You make wrong choice!");
+            break;
     }
-    printf("Position of character is: %s",pos);
     return 0;
+}
+int fdfstocrofch(char str[100],char ch)
+{
+    int len,flag=0,i;
+    while(str[len]!='\0')
+    {
+        len++;
+    }
+    for(i=0;i<len;i++)
+    {
+        if(str[i]==ch)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("Character not found!");
+    }
+    else
+    {
+        return i;
+    }
 }
