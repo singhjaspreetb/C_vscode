@@ -20,7 +20,6 @@ int main()
             break;
         case 2:
             po=fdfstocrofch(str,ch);
-            printf("Index of character is: %s", po);
             break;
         default:
             printf("You make wrong choice!");
@@ -30,7 +29,8 @@ int main()
 }
 int fdfstocrofch(char str[100],char ch)
 {
-    int len,flag=0,i;
+   
+    int len=0,flag=0,i;
     while(str[len]!='\0')
     {
         len++;
@@ -49,6 +49,6 @@ int fdfstocrofch(char str[100],char ch)
     }
     else
     {
-        return i;
+        printf("Position of character is: %d",i+1);
     }
 }

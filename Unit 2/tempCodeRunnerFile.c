@@ -1,30 +1,54 @@
 #include <stdio.h>
-int fab(int);
+#include <string.h>
+int fdfstocrofch(char[],char);
 int main()
 {
-    int x,num;
-    printf("enter the end term: ");
-    scanf("%d",&x);
-    for(int i=0;i<x;i++)
+    int choice,po;
+    char str[100],ch,*pos;
+    printf("Enter the string: ");
+    fflush(stdin);
+    gets(str);
+    printf("Enter the character: ");
+    scanf("%c",&ch);
+    printf("\n1: By Predefined function\t2: By Manually\n\nSelect the method by that you want serch the positon of first occurence of character: ");
+    scanf("%d",&choice);
+    switch (choice)
     {
-        num=fab(i);
-        printf("%d\t",num);
+        case 1:
+            pos=strchr(str,ch);
+            printf("Position of character is: %s", pos);
+            break;
+        case 2:
+            po=fdfstocrofch(str,ch);
+            break;
+        default:
+            printf("You make wrong choice!");
+            break;
     }
     return 0;
 }
-int fab(int x)
+int fdfstocrofch(char str[100],char ch)
 {
-    if(x==0)
+   
+    int len=0,flag=0,i;
+    while(str[len]!='\0')
     {
-        return 0;
+        len++;
     }
-    else if(x==1)
+    for(i=0;i<len;i++)
     {
-        return 1;
+        if(str[i]==ch)
+        {
+            flag=1;
+            break;
+        }
     }
-    else 
+    if(flag==0)
     {
-        return fab(x-1)+fab(x-2);
+        printf("Character not found!");
     }
-
+    else
+    {
+        printf("Position of character is: %d",i+1);
+    }
 }

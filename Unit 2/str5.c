@@ -42,4 +42,5 @@ char strapp(char str1[100],char str2[50])
     {
         str1[i+len1]=str2[i];
     }
+    str1[len1+len2]='\0';
 }

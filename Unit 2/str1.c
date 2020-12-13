@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int choice,i=0,j=0;
+    int choice,i=0;
     char str[100],ch[50];
     printf("1: scanf()\t2: gets()\t3: getchar()\t4: sscanf()\nSelect the string input method: ");
     scanf("%d", &choice);
@@ -18,8 +18,8 @@ int main()
         break;
     case 3:
         fflush(stdin);
-        printf("Ente $ at end.");
-        while(str[i]!='$')
+        printf("Enter $ at end: ");
+        while(str[i]!='\0')
         {
         str[i]=getchar();
         i++;
@@ -46,10 +46,11 @@ int main()
         puts(str);
         break;
     case 3:
-        while(j<i)
+        i=0;
+        while(str[i]!='\0')
         {
-        putchar(str[j]);
-        j++;
+        putchar(str[i]);
+        i++;
         }
         break;
     case 4:
