@@ -19,7 +19,7 @@ int main()
             printf("Position of character is: %s", pos);
             break;
         case 2:
-            po=fdfstocrofch(str,ch);
+            fdfstocrofch(str,ch);
             break;
         default:
             printf("You make wrong choice!");
@@ -49,6 +49,12 @@ int fdfstocrofch(char str[100],char ch)
     }
     else
     {
-        printf("Position of character is: %d",i+1);
+        printf("Position of character is: ");
+        {
+            for(i;i<len;i++)
+            {
+                putchar(str[i]);
+            }
+        }
     }
 }

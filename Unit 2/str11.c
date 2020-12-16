@@ -24,13 +24,12 @@ int main()
         printf("You make wrong choice!");
         break;
     }
-    
+
     return 0;
 }
 int strcspon(char str1[100], char str2[100])
 {
-    int i,j,flag,index;
-
+    int i = 0, j = 0, flag = 0;
     while (str1[i] != '\0')
     {
         j = 0;
@@ -39,16 +38,15 @@ int strcspon(char str1[100], char str2[100])
         {
             if (str1[i] == str2[j])
             {
-                flag = 1; 
+                flag = 1;
             }
             j++;
         }
-        if (flag == 1) 
+        if (flag == 1)
         {
             break;
         }
-        index++, i++;
+        i++;
     }
-        printf("Position of string is: %d", index);
-
+    printf("Position of string is: %d", i);
 }

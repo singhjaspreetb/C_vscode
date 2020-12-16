@@ -19,7 +19,7 @@ int main()
         printf("Position of character at rear end is: %s", pos);
         break;
     case 2:
-        po = fdfstocrofchend(str, ch);
+        fdfstocrofchend(str, ch);
         break;
     default:
         printf("You make wrong choice!");
@@ -49,6 +49,12 @@ int fdfstocrofchend(char str[100], char ch)
     }
     else
     {
-        printf("Position of character at rear end is: %d", i + 1);
+        printf("Position of character is: ");
+        {
+            for (i; i < len; i++)
+            {
+                putchar(str[i]);
+            }
+        }
     }
 }

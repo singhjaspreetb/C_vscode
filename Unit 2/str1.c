@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 int main()
 {
-    int choice,i=0;
-    char str[100],ch[50];
+    int choice, i = 0;
+    char str[100], str2[100], ch, ch2;
     printf("1: scanf()\t2: gets()\t3: getchar()\t4: sscanf()\nSelect the string input method: ");
     scanf("%d", &choice);
     printf("Enter the String: ");
@@ -19,16 +20,18 @@ int main()
     case 3:
         fflush(stdin);
         printf("Enter $ at end: ");
-        while(str[i]!='\0')
+        while ((str[i] = getchar()) != '$')
         {
-        str[i]=getchar();
-        i++;
+            i++;
         }
-        str[i]='\0';
+        str[i] = '\0';
         break;
     case 4:
         fflush(stdin);
-        sscanf(str,"%s",ch);
+        gets(str);
+        sscanf(str, "%c %c", &ch, &ch2);
+        printf("\n%c", ch);
+        printf("\n%c", ch2);
         break;
     default:
         printf("\nYou make wrong choice!");
@@ -46,15 +49,16 @@ int main()
         puts(str);
         break;
     case 3:
-        i=0;
-        while(str[i]!='\0')
+        i = 0;
+        while (str[i] != '\0')
         {
-        putchar(str[i]);
-        i++;
+            putchar(str[i]);
+            i++;
         }
         break;
     case 4:
-        // sprintf();
+        sprintf(str2, str);
+        puts(str2);
         break;
     default:
         printf("\nYou make wrong choice!");
